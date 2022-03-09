@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin;
 use App\Http\Controllers\GastoController;
 use App\Http\Controllers\GCategoriaController;
 use App\Http\Controllers\Orden\OrdenController;
@@ -46,11 +47,12 @@ Route::resource('ordenes', OrdenController::class)
 
 Route::get('ordenes.confirma', [OrdenController::class, 'confirma'])->name('ordenes.confirma');
 
+
+
 Route::resource('gastos', GastoController::class)->names('gastos');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-
-
-
+//rutas admin
+Route::get('admin.ordenes', [Admin::class, 'ordenes'])->name('admin.ordenes');

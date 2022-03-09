@@ -48,6 +48,37 @@
                     <x-jet-dropdown align="right" width="60">
                         <x-slot name="trigger">
                             <span class="inline-flex rounded-md">
+                                <x-btnmenu :active="request()->routeIs('admin.*')">
+                                    {{__('Admin')}}
+                                </x-btnmenu>
+                            </span>
+                        </x-slot>
+
+                        <x-slot name="content">
+                            <div class="w-60">
+                                <!-- Productos -->
+                                <div class="block px-4 py-2 text-xs text-yellow-500">
+                                    {{ __('Opciones del administrador') }}
+                                </div>
+
+                                <!-- Team Settings -->
+                                <x-jet-dropdown-link href="{{ route('admin.ordenes') }}">
+                                    {{ __('Ordenes') }}
+                                </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{ route('dashboard') }}">
+                                    {{ __('Almacen') }}
+                                </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{ route('vendedores.vgastos') }}">
+                                    {{ __('Gastos') }}
+                                </x-jet-dropdown-link>
+                            </div>
+                        </x-slot>
+                    </x-jet-dropdown>
+                </div>
+                <div class="ml-3 relative">
+                    <x-jet-dropdown align="right" width="60">
+                        <x-slot name="trigger">
+                            <span class="inline-flex rounded-md">
                                 <x-btnmenu :active="request()->routeIs('categorias.*')">
                                     {{__('Categorías')}}
                                 </x-btnmenu>
