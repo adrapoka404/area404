@@ -25,7 +25,7 @@ class ProductoSeeder extends Seeder
         $cp0->categoria_id = 42;
         $cp0->estatus = 1;
         $cp0->tienda_id = 1;
-        $cp0->imagen = "Mal.PNG";
+        $cp0->imagen = "imp_bn_hn.png";
         $cp0->save();
 
         $cp1 = new Producto();
@@ -39,7 +39,7 @@ class ProductoSeeder extends Seeder
         $cp1->categoria_id = 42;
         $cp1->estatus = 1;
         $cp1->tienda_id = 1;
-        $cp1->imagen = "Mal.PNG";
+        $cp1->imagen = "imp_color_th.png";
         $cp1->save();
 
         $cp2 = new Producto();
@@ -53,21 +53,21 @@ class ProductoSeeder extends Seeder
         $cp2->categoria_id = 42;
         $cp2->estatus = 1;
         $cp2->tienda_id = 1;
-        $cp2->imagen = "Mal.PNG";
+        $cp2->imagen = "imp_bn_th.png";
         $cp2->save();
 
         $cp3 = new Producto();
         $cp3->nombre = "Impresion BN Imagen PO";
         $cp3->slug = "impresion-bn-imagen-po";
         $cp3->descripcion = "Impresion blanco y negro en papel opalina con imagen";
-        $cp3->precio = "8";
+        $cp3->precio = "12";
         $cp3->cantidad = "0";
         $cp3->minimo = "1";
         $cp3->patern_id = 0;
         $cp3->categoria_id = 42;
         $cp3->estatus = 1;
         $cp3->tienda_id = 1;
-        $cp3->imagen = "Mal.PNG";
+        $cp3->imagen = "imp_bn_po.png";
         $cp3->save();
 
         $cp4 = new Producto();
@@ -81,7 +81,7 @@ class ProductoSeeder extends Seeder
         $cp4->categoria_id = 42;
         $cp4->estatus = 1;
         $cp4->tienda_id = 1;
-        $cp4->imagen = "Mal.PNG";
+        $cp4->imagen = "imp_bn_pf.png";
         $cp4->save();
 
         $cp5 = new Producto();
@@ -95,7 +95,7 @@ class ProductoSeeder extends Seeder
         $cp5->categoria_id = 42;
         $cp5->estatus = 1;
         $cp5->tienda_id = 1;
-        $cp5->imagen = "Mal.PNG";
+        $cp5->imagen = "imp_color_hn.png";
         $cp5->save();
 
         $cp6 = new Producto();
@@ -109,7 +109,7 @@ class ProductoSeeder extends Seeder
         $cp6->categoria_id = 42;
         $cp6->estatus = 1;
         $cp6->tienda_id = 1;
-        $cp6->imagen = "Mal.PNG";
+        $cp6->imagen = "imp_color_po.png";
         $cp6->save();
 
         $cp7 = new Producto();
@@ -123,36 +123,24 @@ class ProductoSeeder extends Seeder
         $cp7->categoria_id = 42;
         $cp7->estatus = 1;
         $cp7->tienda_id = 1;
-        $cp7->imagen = "Mal.PNG";
+        $cp7->imagen = "imp_color_img.png";
         $cp7->save();
 
         $cp8 = new Producto();
         $cp8->nombre = "Impresion BN Imagen TH";
         $cp8->slug = "impresion-bn-imagen-th";
         $cp8->descripcion = "Impresión blanco y negro en papel normal con imagen en toda la hoja";
-        $cp8->precio = "10";
+        $cp8->precio = "12";
         $cp8->cantidad = "0";
         $cp8->minimo = "0";
         $cp8->patern_id = 0;
         $cp8->categoria_id = 42;
         $cp8->estatus = 1;
         $cp8->tienda_id = 1;
-        $cp8->imagen = "Mal.PNG";
+        $cp8->imagen = "imp_bn_th.png";
         $cp8->save();
 
-        $cp9 = new Producto();
-        $cp9->nombre = "Impresión Color Imagen PO TH";
-        $cp9->slug = "impresion-color-imagen-po-th";
-        $cp9->descripcion = "Impresion color en papel opalina con imagen en toda la hoja";
-        $cp9->precio = "20";
-        $cp9->cantidad = "0";
-        $cp9->minimo = "0";
-        $cp9->patern_id = 0;
-        $cp9->categoria_id = 42;
-        $cp9->estatus = 1;
-        $cp9->tienda_id = 1;
-        $cp9->imagen = "Mal.PNG";
-        $cp9->save();
+      
 
         $cp10 = new Producto();
         $cp10->nombre = "Impresion BN Imagen TH PO";
@@ -165,7 +153,7 @@ class ProductoSeeder extends Seeder
         $cp10->categoria_id = 42;
         $cp10->estatus = 1;
         $cp10->tienda_id = 1;
-        $cp10->imagen = "Mal.PNG";
+        $cp10->imagen = "imp_bn_pf.png";
         $cp10->save();
 
         $cp11 = new Producto();
@@ -179,7 +167,7 @@ class ProductoSeeder extends Seeder
         $cp11->categoria_id = 42;
         $cp11->estatus = 1;
         $cp11->tienda_id = 1;
-        $cp11->imagen = "Mal.PNG";
+        $cp11->imagen = "imp_color_pf.png";
         $cp11->save();
 
         $cp12 = new Producto();
@@ -193,7 +181,7 @@ class ProductoSeeder extends Seeder
         $cp12->categoria_id = 42;
         $cp12->estatus = 1;
         $cp12->tienda_id = 1;
-        $cp12->imagen = "Mal.PNG";
+        $cp12->imagen = "imp_color_pf.png";
         $cp12->save();
 
         $cp13 = new Producto();
@@ -207,7 +195,7 @@ class ProductoSeeder extends Seeder
         $cp13->categoria_id = 5;
         $cp13->estatus = 1;
         $cp13->tienda_id = 1;
-        $cp13->imagen = "Mal.PNG";
+        $cp13->imagen = "hojas_blancas.png";
         $cp13->save();
 
         $cp14 = new Producto();
@@ -221,7 +209,7 @@ class ProductoSeeder extends Seeder
         $cp14->categoria_id = 21;
         $cp14->estatus = 1;
         $cp14->tienda_id = 1;
-        $cp14->imagen = "Mal.PNG";
+        $cp14->imagen = "mantenimiento_preventivo.png";
         $cp14->save();
 
         $cp15 = new Producto();
@@ -235,7 +223,7 @@ class ProductoSeeder extends Seeder
         $cp15->categoria_id = 42;
         $cp15->estatus = 1;
         $cp15->tienda_id = 1;
-        $cp15->imagen = "Mal.PNG";
+        $cp15->imagen = "copia_bn.png";
         $cp15->save();
 
         $cp16 = new Producto();
@@ -249,7 +237,7 @@ class ProductoSeeder extends Seeder
         $cp16->categoria_id = 42;
         $cp16->estatus = 1;
         $cp16->tienda_id = 1;
-        $cp16->imagen = "Mal.PNG";
+        $cp16->imagen = "copia_color.png";
         $cp16->save();
 
         $cp17 = new Producto();
@@ -263,7 +251,7 @@ class ProductoSeeder extends Seeder
         $cp17->categoria_id = 42;
         $cp17->estatus = 1;
         $cp17->tienda_id = 1;
-        $cp17->imagen = "Mal.PNG";
+        $cp17->imagen = "escaner.png";
         $cp17->save();
 
         $cp18 = new Producto();
@@ -277,7 +265,7 @@ class ProductoSeeder extends Seeder
         $cp18->categoria_id = 2;
         $cp18->estatus = 1;
         $cp18->tienda_id = 1;
-        $cp18->imagen = "Mal.PNG";
+        $cp18->imagen = "investigacion.png";
         $cp18->save();
 
         $cp19 = new Producto();
@@ -291,7 +279,7 @@ class ProductoSeeder extends Seeder
         $cp19->categoria_id = 2;
         $cp19->estatus = 1;
         $cp19->tienda_id = 1;
-        $cp19->imagen = "Mal.PNG";
+        $cp19->imagen = "investigacion.png";
         $cp19->save();
 
         $cp20 = new Producto();
@@ -305,7 +293,7 @@ class ProductoSeeder extends Seeder
         $cp20->categoria_id = 44;
         $cp20->estatus = 1;
         $cp20->tienda_id = 1;
-        $cp20->imagen = "Mal.PNG";
+        $cp20->imagen = "engargolado_plastico.png";
         $cp20->save();
 
         $cp21 = new Producto();
@@ -319,7 +307,7 @@ class ProductoSeeder extends Seeder
         $cp21->categoria_id = 44;
         $cp21->estatus = 1;
         $cp21->tienda_id = 1;
-        $cp21->imagen = "Mal.PNG";
+        $cp21->imagen = "engargolado_plastico.png";
         $cp21->save();
 
         $cp22 = new Producto();
@@ -333,7 +321,7 @@ class ProductoSeeder extends Seeder
         $cp22->categoria_id = 44;
         $cp22->estatus = 1;
         $cp22->tienda_id = 1;
-        $cp22->imagen = "Mal.PNG";
+        $cp22->imagen = "engargolado_plastico.png";
         $cp22->save();
 
         $cp23 = new Producto();
@@ -347,7 +335,7 @@ class ProductoSeeder extends Seeder
         $cp23->categoria_id = 44;
         $cp23->estatus = 1;
         $cp23->tienda_id = 1;
-        $cp23->imagen = "Mal.PNG";
+        $cp23->imagen = "engargolado_metalico.png";
         $cp23->save();
 
         $cp24 = new Producto();
@@ -361,7 +349,7 @@ class ProductoSeeder extends Seeder
         $cp24->categoria_id = 44;
         $cp24->estatus = 1;
         $cp24->tienda_id = 1;
-        $cp24->imagen = "Mal.PNG";
+        $cp24->imagen = "engargolado_metalico.png";
         $cp24->save();
 
         $cp25 = new Producto();
@@ -375,7 +363,35 @@ class ProductoSeeder extends Seeder
         $cp25->categoria_id = 44;
         $cp25->estatus = 1;
         $cp25->tienda_id = 1;
-        $cp25->imagen = "Mal.PNG";
+        $cp25->imagen = "engargolado_metalico.png";
         $cp25->save();
+
+        $cp26 = new Producto();
+        $cp26->nombre = "Folder T. Carta";
+        $cp26->slug = "folder-t.-carta";
+        $cp26->descripcion = "Folder beige tamaño carta papale reciclado";
+        $cp26->precio = "5";
+        $cp26->cantidad = "0";
+        $cp26->minimo = "0";
+        $cp26->patern_id = 0;
+        $cp26->categoria_id = 44;
+        $cp26->estatus = 1;
+        $cp26->tienda_id = 1;
+        $cp26->imagen = "folder.png";
+        $cp26->save();
+
+        $cp26 = new Producto();
+        $cp26->nombre = "Recarga";
+        $cp26->slug = "recarga";
+        $cp26->descripcion = "Producto par generalizar recargas se debe agregar la cantidad completa incluyendo la comision";
+        $cp26->precio = "1";
+        $cp26->cantidad = "0";
+        $cp26->minimo = "0";
+        $cp26->patern_id = 0;
+        $cp26->categoria_id = 44;
+        $cp26->estatus = 1;
+        $cp26->tienda_id = 1;
+        $cp26->imagen = "recarga.png";
+        $cp26->save();
     }
 }

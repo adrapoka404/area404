@@ -41,8 +41,10 @@ Route::resource('vendedores', VendedorController::class)
 ->names('vendedores');
 
 Route::resource('ordenes', OrdenController::class)
-    ->only(['index', 'edit'])   
+    ->only(['index', 'edit', 'show'])   
     ->names('ordenes');
+
+Route::get('ordenes.confirma', [OrdenController::class, 'confirma'])->name('ordenes.confirma');
 
 Route::resource('gastos', GastoController::class)->names('gastos');
 

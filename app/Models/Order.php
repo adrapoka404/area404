@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Producto;
+use App\Models\OrderDetails;
+use Illuminate\Support\Facades\Auth;
 
-class Orden extends Model
+class Order extends Model
 {
     use HasFactory;
 
@@ -24,6 +26,32 @@ class Orden extends Model
         $this->reordenar();
     }
 
+    public function confirma(){
+        $orden = new $this();
+        $orden->user_id = Auth::user()->id;
+        $orden->tienda_id = 1;
+        $orden->subtotal = session('orden.ftotal');
+        $orden->total = session('orden.total');
+        $orden->folio = session('orden.folio');
+        $orden->estatus = 'complete';
+
+        $orden->save();
+
+        
+        foreach(session('orden.detalle') as $product => $dp){
+            $detalle = new OrderDetails();
+            $detalle->order_id = $orden->id;
+            $detalle->producto_id = $product;
+            $detalle->producto = $dp['nombre'];
+            $detalle->cantidad = $dp['cantidad'];
+            $detalle->subtotal = $dp['st']; 
+
+            $detalle->save();
+        }
+        
+        $this->destroy_order();
+    }
+
     private function reordenar()
     {
         session()->forget('orden');
@@ -35,6 +63,7 @@ class Orden extends Model
 
                 session()->put('orden.detalle.'         . $id . '.nombre', $product->nombre);
                 session()->put('orden.detalle.'         . $id . '.precio', $product->precio);
+                session()->put('orden.detalle.'         . $id . '.imagen', $product->imagen);
                 session()->increment('orden.detalle.'   . $id . '.cantidad', $incrementBy = $cant);
                 session()->put('orden.detalle.'         . $id . '.st', $sbtf);
 
@@ -53,5 +82,10 @@ class Orden extends Model
     private function format_price($cant)
     {
         return "$ " .  number_format($cant, 2, ".", "'");
+    }
+
+    private function destroy_order(){
+        session()->forget('orden');
+        session()->forget('productos');
     }
 }

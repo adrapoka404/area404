@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Vededores;
 use App\Http\Controllers\Controller;
 use App\Models\CategoriasGasto;
 use App\Models\Gasto;
-use App\Models\Orden;
+use App\Models\Order;
 use App\Models\Producto;
 use App\Models\Team;
 use Illuminate\Http\Request;
@@ -54,7 +54,7 @@ class VendedorController extends Controller
     public function store(Request $request)
     {   
         
-        $orden =  new Orden();
+        $orden =  new Order();
         $orden->crear($request);
 
         return redirect()->route('vendedores.index')->with('info', __('Se agrego ' . session('orden.ultimo'). ' a la orden'));

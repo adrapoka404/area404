@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Orden;
 
 use App\Http\Controllers\Controller;
-use App\Models\Orden;
+use App\Models\Order;
+
 use Illuminate\Http\Request;
 
 class OrdenController extends Controller
@@ -38,7 +39,7 @@ class OrdenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "Confirmar orden";
     }
 
     /**
@@ -60,7 +61,7 @@ class OrdenController extends Controller
      */
     public function edit($id)
     {
-        $orden = new Orden();
+        $orden = new Order();
         $orden->quitar($id);
         if(session()->has('orden'))
             return redirect()->route('ordenes.index')->with('info', __('Se ha elemininado el elemento del carrito'));
@@ -89,4 +90,17 @@ class OrdenController extends Controller
     {
         //
     }
+
+    public function confirma()
+    {
+        $orden = new Order();
+        $orden->confirma();
+
+        if(!session()->has('productos')) 
+            return redirect('vendedores')->with('info', __('Exito! Felicidades por esta venta. te amamos mil.'));
+
+        return redirect('ordenes.index')->with('info', __('Algo anda mal, no se pudo completar a orden'));
+
+    }
 }
+

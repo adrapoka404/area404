@@ -8,7 +8,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center bg-blue-lightest">
 @foreach ($productos as $producto)
 
-    <div id="app" class="bg-white w-128 h-60 rounded shadow-md flex card text-grey-darkest m-5">
+    <div id="app" class="bg-white w-128 h-60 rounded shadow-md flex card text-grey-darkest m-5 shadow-orange-500">
         <img class="w-1/2 h-full rounded-l-sm" src="https://bit.ly/2EApSiC" alt="Room Image">
         <div class="w-full flex flex-col">
             @if ($producto->patern_id > 0)
@@ -33,7 +33,7 @@
                 {!! Form::label('cant', __('Cant.'), ["class" => "text-xs"]) !!}
                 {!! Form::hidden('nombre', $producto->nombre, []) !!}
                 {!! Form::hidden('producto', $producto->id, []) !!}
-                {!! Form::number('cantidad', 1, ["class" => " w-20"]) !!}
+                {!! Form::number('cantidad', 1, ["class" => " w-20 border-orange-500 hover:border-yellow-500 focus:border-yellow-500 "]) !!}
                 <x-jet-button class="ml-4">
                     {{ __('Agregar') }}
                 </x-jet-button>
@@ -52,6 +52,6 @@
     </div>
 @endforeach
 </div>
-<div>$productos->links()
+<div>
 </div>
 @endif
